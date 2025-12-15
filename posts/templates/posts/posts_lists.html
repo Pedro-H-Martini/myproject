@@ -1,0 +1,19 @@
+<!-- prettier-ignore -->
+{% extends 'layout.html' %}
+{% block title %}
+    Posts 
+{% endblock %}
+{% block content %}
+<section>
+    {% for post in posts %}
+        <article class='post'>
+            <h2><a href="{% url 'posts:page' post.slug %}">{{ post.title }}</a></h2>
+            <p>{{ post.content|truncatewords:30 }}</p>
+            <p>{{post.created_at}}</p>
+
+        </article>
+    {% empty %}
+        <p>No posts available.</p>
+    {% endfor %}
+</section>
+{% endblock %}

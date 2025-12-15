@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Django App{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/script.js' %}"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar-emotes"
+        ><span role="img" aria-label="home">🏡</span></a
+      >
+      <a href="/about/" class="navbar-emotes"
+        ><span role="img" aria-label="about">ℹ️</span></a
+      >
+      <a href="{% url 'posts:list' %}" class="navbar-emotes"
+        ><span role="img" aria-label="posts">📰</span></a
+      >
+    </nav>
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+min-height: 100vh;
+display: grid;
+place-content: center;
+color:whitesmoke;
+background-color: #282c34;
+font-size: 2rem;
+}
+
+h1,p {
+    text-align: center;
+}
+
+.navbar {
+    background: #2ecc40;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.5rem; /* revert to normal size */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1em;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #d4ffea;
+}
+
+.navbar .navbar-emotes,
+.navbar span {
+    font-size: 2.5rem;
+    margin-right: 1em;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
